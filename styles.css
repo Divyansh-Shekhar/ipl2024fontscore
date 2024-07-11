@@ -1,0 +1,41 @@
+html {
+                background-color: #00e4ff;
+            }
+            #selection {
+                position: absolute;
+                top: 230px;
+            }
+            #sd {
+                position: absolute;
+                left: 53px;
+            }
+            #td {
+                position: absolute;
+                left: 99px;
+            }
+            #dash {
+                position: absolute;
+                left: 144px;
+            }
+            #wicket {
+                position: absolute;
+                left: 200px;
+            }
+            select {
+                position: absolute;
+                left: 100px;
+            }
+	    #oversdiv {
+		position: absolute;
+		top: 100px;
+	    }
+	    details {
+		position: absolute;
+		top: 350px;
+	    }
+	    summary {
+		cursor: help;
+	    }
+	    select, button {
+		cursor: pointer;
+	    }

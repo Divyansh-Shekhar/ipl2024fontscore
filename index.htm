@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>0-0 (0.0)</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <img id="fd">
+        <img id="sd">
+        <img src="https://i.ibb.co/Gp7jNZW/Zero.jpg" id="td">
+        <img id="dash" src="https://i.ibb.co/NTvJkFn/Dash.jpg">
+        <img src="https://i.ibb.co/Gp7jNZW/Zero.jpg" id="wicket">
+	<div id="oversdiv">
+	<h1><span id="overs">0.0</span> (<span id="balls">0</span> balls)</h1><button onclick="plusone(); done()">+1</button><button onclick="minusone(); done()">-1</button><br>or <input placeholder="Enter Manually..." id="manualballs" type="number" onchange="manualenter(); done()"> balls
+	</div>
+        <div id="selection">
+	<label for="fds">First Digit</label>
+        <select id="fds" onchange="done()">
+	    <option value="">Blank</option>
+	    <option value="https://i.ibb.co/y83Xt9t/One.jpg#100">1</option>
+            <option value="https://i.ibb.co/y6cxb4g/Two.jpg#200">2</option>
+            <option value="https://i.ibb.co/gWs5Ct0/Three.jpg#300">3</option>
+            <option value="https://i.ibb.co/T4ddTR9/Four.jpg#400">4</option>
+            <option value="https://i.ibb.co/1r7kQSQ/Five.jpg#500">5</option>
+            <option value="https://i.ibb.co/F0VgJqK/Six.jpg#600">6</option>
+            <option value="https://i.ibb.co/4P8BtFW/Seven.jpg#700">7</option>
+            <option value="https://i.ibb.co/2ntLhHT/Eight.jpg#800">8</option>
+            <option value="https://i.ibb.co/198X0gC/Nine.jpg#900">9</option>
+        </select><br>
+	<label for="sds">Second Digit</label>
+        <select id="sds" onchange="done()">
+	    <option value="">Blank</option>
+	    <option value="https://i.ibb.co/Gp7jNZW/Zero.jpg#0">0</option>
+            <option value="https://i.ibb.co/y83Xt9t/One.jpg#10">1</option>
+            <option value="https://i.ibb.co/y6cxb4g/Two.jpg#20">2</option>
+            <option value="https://i.ibb.co/gWs5Ct0/Three.jpg#30">3</option>
+            <option value="https://i.ibb.co/T4ddTR9/Four.jpg#40">4</option>
+            <option value="https://i.ibb.co/1r7kQSQ/Five.jpg#50">5</option>
+            <option value="https://i.ibb.co/F0VgJqK/Six.jpg#60">6</option>
+            <option value="https://i.ibb.co/4P8BtFW/Seven.jpg#70">7</option>
+            <option value="https://i.ibb.co/2ntLhHT/Eight.jpg#80">8</option>
+            <option value="https://i.ibb.co/198X0gC/Nine.jpg#90">9</option>
+        </select><br>
+	<label for="tds">Third Digit</label>
+        <select id="tds" onchange="done()">
+	    <option value="https://i.ibb.co/Gp7jNZW/Zero.jpg#0">0</option>
+            <option value="https://i.ibb.co/y83Xt9t/One.jpg#1">1</option>
+            <option value="https://i.ibb.co/y6cxb4g/Two.jpg#2">2</option>
+            <option value="https://i.ibb.co/gWs5Ct0/Three.jpg#3">3</option>
+            <option value="https://i.ibb.co/T4ddTR9/Four.jpg#4">4</option>
+            <option value="https://i.ibb.co/1r7kQSQ/Five.jpg#5">5</option>
+            <option value="https://i.ibb.co/F0VgJqK/Six.jpg#6">6</option>
+            <option value="https://i.ibb.co/4P8BtFW/Seven.jpg#7">7</option>
+            <option value="https://i.ibb.co/2ntLhHT/Eight.jpg#8">8</option>
+            <option value="https://i.ibb.co/198X0gC/Nine.jpg#9">9</option>
+	</select><br>
+	<label for="wickets">Wickets</label>
+        <select id="wickets" onchange="done()">
+	    <option value="https://i.ibb.co/Gp7jNZW/Zero.jpg#0">0</option>
+            <option value="https://i.ibb.co/y83Xt9t/One.jpg#1">1</option>
+            <option value="https://i.ibb.co/y6cxb4g/Two.jpg#2">2</option>
+            <option value="https://i.ibb.co/gWs5Ct0/Three.jpg#3">3</option>
+            <option value="https://i.ibb.co/T4ddTR9/Four.jpg#4">4</option>
+            <option value="https://i.ibb.co/1r7kQSQ/Five.jpg#5">5</option>
+            <option value="https://i.ibb.co/F0VgJqK/Six.jpg#6">6</option>
+            <option value="https://i.ibb.co/4P8BtFW/Seven.jpg#7">7</option>
+            <option value="https://i.ibb.co/2ntLhHT/Eight.jpg#8">8</option>
+            <option value="https://i.ibb.co/198X0gC/Nine.jpg#9">9</option>
+	</select><br>
+        <button onclick="allout()">All Out</button><br>
+	<button onclick="notallout()">Not All Out</button>
+        </div>
+	<details>
+	<summary><strong>History of Updates</strong></summary>
+	<div id="2.0">
+	<strong>Update 2.0 (July 8, 2024)</strong>
+	<ul>
+	<li>Removed the error that used to let the number of balls reach negative.</li>
+	<li>Set the types of cursors while hovering over specific points.</li>
+	<li>Removed the error that allowed a lot of NaN's to be showed.</li>
+	</ul>
+	</div>
+	<div id="1.0">
+	<strong>Update 1.0 (July 2, 2024)</strong>
+	<ul>
+	<li>An easy-to-use app used to display scores in IPL font.</li>
+	</ul>
+	</div>
+	</details>
+        <script src="script.js">
+        </script>
+    </body>
+</html>
